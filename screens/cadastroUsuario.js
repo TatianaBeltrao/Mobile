@@ -1,30 +1,36 @@
 import React from 'react';
-import { StyleSheet, View, Image, TextInput, Button } from 'react-native';
+import { StyleSheet, View, TextInput, Button } from 'react-native';
+import Navigator from '../rotas/homeStack';
 
-export default function Login() {
+export default function CadastroUsuario() {
+
     return (
        <View style={styles.profile}>
-           <Image style={{ width: 100, height: 100 }} source={require('../assets/user.png')}/>
+           
             <TextInput 
                 style={styles.input}
-                placeholder='Usuário'
+                placeholder='Nome'
             />
             <TextInput 
+                style={styles.input}
+                placeholder='CPF'
+            />
+             <TextInput 
+                style={styles.input}
+                placeholder='Email'
+            />
+             <TextInput 
                 style={styles.input}
                 placeholder='Senha'
             />
             <View style={styles.botoes}>
             <Button 
-                title= 'Login'
+                title= 'Salvar'
                 color= '#1e90ff'
+               
             />
             </View>
-            <View style={styles.botoes}>
-             <Button 
-                title= 'Cadastro'
-                color= '#1e90ff'
-            />
-            </View>
+            
             
        </View> 
     )
